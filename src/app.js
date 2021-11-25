@@ -29,7 +29,6 @@ function formatArray(movies) {
 
 function getMovie(movie) {
     const url = `${API_URL}${movie}${API_KEY}`
-    console.log(url);
     fetch(url)
     .then((response) => {
         return response.json();
@@ -39,7 +38,7 @@ function getMovie(movie) {
         const movies = formatArray(data.Search);
       
         results.innerHTML = '';
-        let html = ` <section class="row movies-area"> <section class="mt-2 col-9 row" id="results">`;
+        let html = ` <section class="row movies-section"> <section class="mt-2 col-9 row" id="results">`;
 
         movies.forEach(movie => {
 
